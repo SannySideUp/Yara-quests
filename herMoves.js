@@ -1,5 +1,5 @@
 // --- CONFIGURE HER NAME HERE ---
-const HER_NAME = "HerName"; // e.g. "Yara"
+const HER_NAME = "Yara"; // e.g. "Yara"
 
 // --- GAME STATE ---
 
@@ -399,4 +399,5 @@ resetButton.addEventListener("click", () => {
 });
 
 // Do NOT start the game automatically – wait for user action (needed for audio)
+
 

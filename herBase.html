@@ -7,20 +7,103 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="background"></div>
+
 <div class="game-wrapper">
     <div class="card">
-        <div class="title">Yara's Quest</div>
-        <div class="subtitle">A tiny RPG starring you and me</div>
+        <header class="card-header">
+            <div>
+                <div class="title">Yara's Quest</div>
+                <div class="subtitle">A tiny RPG starring you and me</div>
+            </div>
+            <div class="controls">
+                <button id="mute-toggle" class="control-btn" aria-label="Toggle sound">
+                    Sound: On
+                </button>
+                <button id="reset-btn" class="control-btn secondary" aria-label="Restart story">
+                    Restart
+                </button>
+            </div>
+        </header>
+
         <div class="divider"></div>
 
-        <div id="scene-label">Scene 1</div>
-        <div id="text"></div>
-        <div id="buttons"></div>
+        <!-- STATS -->
+        <section class="stats">
+            <div class="stat">
+                <div class="stat-label">
+                    <span>Comfort</span>
+                    <span id="comfort-value">0</span>
+                </div>
+                <div class="stat-bar">
+                    <div id="comfort-bar" class="stat-fill"></div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">
+                    <span>Chaos</span>
+                    <span id="chaos-value">0</span>
+                </div>
+                <div class="stat-bar">
+                    <div id="chaos-bar" class="stat-fill"></div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">
+                    <span>Romance</span>
+                    <span id="romance-value">0</span>
+                </div>
+                <div class="stat-bar">
+                    <div id="romance-bar" class="stat-fill"></div>
+                </div>
+            </div>
+        </section>
 
-        <div class="meta-line" id="meta-line"></div>
+        <div class="divider soft"></div>
+
+        <!-- MAIN SCENE -->
+        <main class="scene">
+            <aside class="sprite-panel">
+                <div class="sprite-circle">
+                    <div class="sprite-initials">H</div>
+                </div>
+                <div id="speaker-label" class="speaker-label">Narrator</div>
+            </aside>
+
+            <section class="scene-content">
+                <div id="scene-label" class="scene-label">Scene 1</div>
+                <div id="text" class="scene-text"></div>
+                <div id="buttons" class="choices"></div>
+                <div id="meta-line" class="meta-line"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- START OVERLAY -->
+    <div id="start-overlay" class="start-overlay">
+        <div class="start-card">
+            <h1>Yara's Quest</h1>
+            <p>
+                A tiny story game made just for you.<br>
+                Your choices will change the mood, the stats,<br>
+                and the ending you see.
+            </p>
+            <button id="start-button" class="start-btn">Start game</button>
+            <p class="start-note">
+                Tip: Turn your sound on if you want music and click sounds.
+            </p>
+        </div>
     </div>
 </div>
+
+<!-- AUDIO (replace files in assets/ if you want) -->
+<audio id="bg-music" src="assets/bg-music.mp3" loop></audio>
+<audio id="click-sound" src="assets/click.wav"></audio>
 
 <script src="script.js"></script>
 </body>
 </html>
+.js"></script>
+</body>
+</html>
+
